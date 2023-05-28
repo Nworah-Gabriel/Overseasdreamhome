@@ -1,0 +1,150 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .col-4,
+  .card {
+    width: 100%;
+    height: fit-content;
+  }
+  
+  .card-title{
+    font-size: 1.25rem;
+  }
+  .my_navbar {
+    padding: 20px 20px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #col-6{
+    display: block !important;
+  }
+  .col-6 {
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+  }
+  .card-title{
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 479.98px) {
+  .col-4,
+  .card {
+    width: 100%;
+  }
+  .col-md-4 {
+    /* transform: scale(0.9); */
+    display: inline;
+    width: 50%;
+  }
+  .col-md-8 {
+    /* transform: scale(0.9); */
+    display: inline;
+    width: 50%;
+  }
+  .container{
+    width: 100%;
+    /* margin-left: 2.5%; */
+  }
+}
+/* @media  screen and (max-width: 479.98) {
+  #col-6
+  .row-g-0{
+    background-color: red !important;
+    max-width: 20px !important;
+  }
+}  */
+
+
+
+
+
+html, body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.nav_items {
+  justify-content: end;
+  font-size: 1.1rem;
+}
+
+.nav_logo {
+  color: #edaa38 !important;
+}
+.my_navbar {
+  background-color: transparent;
+  padding: 30px 100px;
+}
+
+.page_header {
+  text-align: center;
+  padding-bottom: 0px;
+}
+.page_header2 {
+  text-align: center;
+  padding: 30px 0px 15px;
+}
+
+.footer {
+  background-color: rgb(87, 105, 126);
+}
+.Copyright {
+  background-color: rgb(87, 105, 126);
+}
+
+.ctn {
+  padding: 10px;
+}
+
+.btn {
+  background-color: #edaa38;
+  border-color: #ed9c38;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.col-4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.card-title{
+  min-height: 3.5em;
+  margin-bottom: 0.75rem;
+}
+#col-6{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.mb-3{
+  border-bottom: 1px solid #edaa38;
+  box-shadow: none !important;
+}
+.col-6{
+  margin-bottom: 20px;
+}
+
+/* testing */
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #edaa38;
+  border-color: #ed9c38;
+}
+.row {
+  box-shadow: none !important;
+}
+
