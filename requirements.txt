@@ -1,4 +1,3 @@
-python
 django
 django-widget-tweaks
 requests
