@@ -1,0 +1,243 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html, body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .form{
+    width: 100% !important;
+  }
+  body{
+    font-size: 15px;
+  }
+  .col-7 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .col-5 {
+    width: 100%;
+  }
+  .my_navbar {
+    padding: 30px 20px !important;
+  }
+  .form a {
+    margin-left: 40% !important;
+  }
+  .col-7 {
+    height: 800px !important;
+  }
+  .mySwiper {
+    height: 20% !important;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .form{
+    width: 100% !important;
+  }
+  p, .caption, ul{
+    font-size: 15px !important;
+  }
+  h2,h5{
+    font-size: 20px;
+  }
+  .col-7 {
+    width: 94%;
+    margin-right: 3%;
+    margin-left: 3%;
+    height: 450px !important;
+  }
+  .form a {
+    margin-left: 35% !important;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  .mySwiper2 {
+    height: 250px !important;
+    width: 100%;
+  }
+  .mySwiper {
+    height: 20% !important;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+}
+.nav_items {
+  justify-content: end;
+  font-size: 1.1rem;
+}
+
+.nav_logo {
+  font-size: 25px;
+  font-weight: 500;
+  color: #edaa38 !important;
+}
+.my_navbar {
+  background-color: transparent;
+  padding: 30px 100px;
+}
+
+.page_header {
+  text-align: left;
+  padding-bottom: 0px;
+  padding-top: 30px;
+}
+.caption{
+  font-size: 1.3rem;
+  padding-bottom: 5px;
+}
+.footer {
+  background-color: rgb(87, 105, 126);
+}
+.Copyright {
+  background-color: rgb(87, 105, 126);
+}
+
+.ctn {
+  padding: 10px;
+}
+
+.btn {
+  background-color: #edaa38;
+  border-color: #ed9c38;
+}
+
+.card-body {
+  text-align: center;
+}
+#container{
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+}
+
+.caption{
+  color: #edaa38;
+}
+.property-info{
+  display: flex;
+  justify-content: space-between;
+}
+.price{
+  margin-top: 40px;
+  text-align: right;
+}
+.form{
+  background-color: lavender;
+  border-radius: 5px;
+}
+.form button{
+  background-color: #ed9c38;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+}
+.form input, textarea{
+  border: none;
+  padding: 10px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 15px;
+}
+.form a {
+  margin-top: 5%;
+  margin-left: 35%;
+  margin-bottom: 5%;
+}
+
+.detail{
+  display: flex;
+  gap: 10%;
+}
+.Features {
+  margin-top: 30px;
+}
+
+.detail ul {
+  list-style: none;
+  padding-left: 20px;
+}
+.detail ul li::before {
+  content: "\2022";
+  color: #ed9c38;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+h6 {
+  text-align: left; 
+  color: #edaa38;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 500px;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.col-7 {
+  background-color: lavender;
+  height: 800px;
+  border-radius: 5px;
+}
