@@ -8,13 +8,13 @@
   <title>Overseas dream property</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href=" {% static '/css/style.css' %}">
-  <link rel="icon" href="../static/images/logo2.png" sizes="32x32">
+  <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+  <link rel="icon" href="{% static 'images/logo2.png' %}" sizes="32x32">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light my_navbar">
     <div class="container-fluid">
-      <a class="navbar-brand nav_logo" href="/"><img src="/static/images/Logo2.png" alt=""></a>
+      <a class="navbar-brand nav_logo" href="/"><img src="{% static 'images/logo2.png' %}" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,7 +39,7 @@
         <div class="card">
           <img src="{{ mansion.CoverImageUrl }}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{ mansion.Title }}: {{ mansion.Location }} – {{ mansion.Price }}</h5>
+            <h5 class="card-title">{{ mansion.Title }}: {{ mansion.Location }} – {{ mansion.DollarsPrice }}</h5>
             <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
             <a href="property/{{ mansion.unique_id }}" class="btn btn-primary">View property</a>
           </div>
@@ -62,7 +62,7 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">{{ mansion.Title }}: {{ mansion.Location }} – {{ mansion.Price }}</h5>
+                <h5 class="card-title">{{ mansion.Title }}: {{ mansion.Location }} – {{ mansion.DollarsPrice }}</h5>
                 <a href="property/{{ mansion.unique_id }}" class="btn btn-primary">View property</a>
               </div>
             </div>
@@ -103,12 +103,14 @@
 </div>
 <!-- Remove the container if you want to extend the Footer to full width. -->
 
-  <footer class="bg-dark text-center text-white">
+<footer class="bg-dark text-center text-white">
   <!-- Grid container -->
   <div class="p-4 pb-0 footer">
     <!-- Section: Form -->
     <section class="">
-      <form action="">
+      {% load widget_tweaks %}
+      <form method="POST">
+        {% csrf_token %}
         <!--Grid row-->
         <div class="row d-flex justify-content-center">
           <!--Grid column-->
@@ -123,7 +125,8 @@
           <div class="col-md-5 col-12">
             <!-- Email input -->
             <div class="form-outline form-white mb-4">
-              <input type="email" id="form5Example2" class="form-control" placeholder="example@gmail.com" />
+              {% render_field emailForm.Email  id="form5Example2" class="form-control" placeholder="example@gmail.com"  type="email" %}
+              <!-- <input type="email" id="form5Example2" class="form-control" placeholder="example@gmail.com" /> -->
               <label class="form-label" for="form5Example2">Email address</label>
             </div>
           </div>
@@ -148,7 +151,7 @@
   <!-- Copyright -->
   <div class="text-center p-3 Copyright">
     © 2023 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">domainName.com</a>
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
   </div>
   <!-- Copyright -->
 </footer>

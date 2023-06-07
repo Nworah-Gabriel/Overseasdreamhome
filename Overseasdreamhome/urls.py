@@ -15,12 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ecommerceApp.views import home, CheapHomes, DreamHomes, ContactUs
+from ecommerceApp.views import home, CheapHomes, DreamHomes, ContactUs, properties
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
     path('CheapHomes', CheapHomes),
     path('DreamHomes', DreamHomes),
-    path('ContactUs', ContactUs)
+    path('ContactUs', ContactUs),
+    path('property/CheapHomes', CheapHomes),
+    path('property/DreamHomes', DreamHomes),
+    path('property/ContactUs', ContactUs),
+    path('property/<str:id>', properties),
+    
 ]
