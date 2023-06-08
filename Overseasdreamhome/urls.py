@@ -1,3 +1,6 @@
+from django.conf import settings
+from django.conf.urls.static import static
+
 """Overseasdreamhome URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -28,4 +31,4 @@ urlpatterns = [
     path('property/ContactUs', ContactUs),
     path('property/<str:id>', properties),
     
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
