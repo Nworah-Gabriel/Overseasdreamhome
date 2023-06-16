@@ -168,4 +168,4 @@ class CheapHomeFeature(models.Model):
     unique_id = models.UUIDField(default=uuid4, editable=False, unique=True)
 
     def __str__(self):
-        return self.DreamMansion.Title
+        return self.CheapHomes.Title
