@@ -23,7 +23,7 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
           <a class="nav-link" href="CheapHomes">Cheap Homes</a>
           <a class="nav-link" href="DreamHomes">Dream Mansions</a>
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="AboutUs">About Us</a>
           <a class="nav-link" href="ContactUs">Contact Us</a>
         </div>
       </div>
@@ -52,31 +52,7 @@
     
   <h2 class="page_header2">Latest Cheap Homes</h2>
   
-    <div class="row">
-      {% for mansion in CheapHomes %}
-      <div class="col-6">
-        <div class="card mb-3 bxshadow" style="max-width: 740px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="{{ mansion.CoverImageUrl }}" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">{{ mansion.Title }}: {{ mansion.Location }} – {{ mansion.DollarsPrice }}</h5>
-                <a href="property/{{ mansion.unique_id }}" class="btn btn-primary">View property</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-   
-
-    
-  <h2 class="page_header2">Latest Dream Mansions</h2>
-    
-  <div class="row">
+  <div class="row" style="margin: 0px; width: 100%;">
     {% for mansion in DreamMansions %}
     <div class="col-6">
       <div class="card mb-3 bxshadow" style="max-width: 740px;">
@@ -94,7 +70,30 @@
       </div>
     </div>
     {% endfor %}
-  </div>
+    </div>
+    </div>
+
+    
+  <h2 class="page_header2">Latest Dream Mansions</h2>
+  <div class="row" style="margin: 0px; width: 100%;">
+    {% for mansion in DreamMansions %}
+    <div class="col-6">
+      <div class="card mb-3 bxshadow" style="max-width: 740px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ mansion.CoverImageUrl }}" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ mansion.Title }}: {{ mansion.Location }} – {{ mansion.Price }}</h5>
+              <a href="property/{{ mansion.unique_id}}" class="btn btn-primary">View property</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  <!-- </div> -->
     
   
 

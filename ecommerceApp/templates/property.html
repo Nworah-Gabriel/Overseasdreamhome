@@ -24,10 +24,10 @@
       <div class="collapse navbar-collapse nav_items" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" aria-current="page" href="/">Home</a>
-          <a class="nav-link" href="CheapHomes">Cheap Homes</a>
-          <a class="nav-link" href="DreamHomes">Dream Mansions</a>
-          <a class="nav-link" href="#">About Us</a>
-          <a class="nav-link" href="ContactUs">Contact Us</a>
+          <a class="nav-link" href="https://overseasdreamhome.onrender.com/CheapHomes">Cheap Homes</a>
+          <a class="nav-link" href="https://overseasdreamhome.onrender.com/DreamHomes">Dream Mansions</a>
+          <a class="nav-link" href="https://overseasdreamhome.onrender.com/AboutUs">About Us</a>
+          <a class="nav-link" href="https://overseasdreamhome.onrender.com/ContactUs">Contact Us</a>
         </div>
       </div>
     </div>
@@ -100,20 +100,18 @@
         <div>
           <h6>Property Details</h6>
         <ul>
-          <li>Bedrooms: 5</li>
-          <li>Bathrooms: 2</li>
-          <li>Plot size: 1200 m2</li>
-          <li>Habitable space: 262 m2</li>
+          {% for property in properties %}
+          <li>{{ property.Name }}: {{ property.Value}}</li>
+          {% endfor %}
         </ul>
         </div>
         <div>
           
         <h6>Features</h6>
         <ul>
-          <li>Garden</li>
-          <li>Fireplace</li>
-          <li>Furnished</li>
-          <li>Energy Certificate: D</li>
+          {% for feature in features %}
+          <li>{{ feature.Feature }}</li>
+          {% endfor %}
         </ul>
         </div>
       </div>

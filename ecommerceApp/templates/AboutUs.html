@@ -14,43 +14,52 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light my_navbar">
     <div class="container-fluid">
-      <a class="navbar-brand nav_logo" href="/"><img src="{% static 'images/logo2.png' %}" alt=""></a>
+      <a class="navbar-brand nav_logo" href="/"><img src="{% static 'images/logo2.png' %}" alt=""></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse nav_items" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" aria-current="page" href="/">Home</a>
-          <a class="nav-link active" href="CheapHomes">Cheap Homes</a>
+          <a class="nav-link" href="CheapHomes">Cheap Homes</a>
           <a class="nav-link" href="DreamHomes">Dream Mansions</a>
-          <a class="nav-link" href="AboutUs">About Us</a>
+          <a class="nav-link active" href="AboutUs">About Us</a>
           <a class="nav-link" href="ContactUs">Contact Us</a>
         </div>
       </div>
     </div>
   </nav>
-  <h1 class="page_header">Cheap Homes</h1>
-  <div class="container" ctn>
-    <div class="row">
-      
-      {% for mansion in CheapHomes %}
-      <div class="col-4">
-        <div class="card">
-          <img src="{{ mansion.CoverImageUrl }}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{ mansion.Title }}: {{ mansion.Location }} – {{ mansion.DollarsPrice }}</h5>
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-            <a href="property/{{ mansion.unique_id }}" class="btn btn-primary">View property</a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
+  <div class="container">
+    <h1 class="pgh">Contact Us</h1>
+    <hr>
+  </div>
+  <div class="container">
+    <p>
+      Welcome to our real estate sales website! <br><br>
 
-    </div>
+We are a team of experienced and dedicated real estate professionals who are committed to providing exceptional service to our clients. Our mission is to make the process of buying or selling a home as smooth and stress-free as possible.
+<br><br>
+Our website offers a comprehensive range of real estate services, including property listings, property valuations, and expert advice on buying and selling real estate. We have a wide selection of properties available for sale, ranging from apartments and townhouses to luxury homes and investment properties.
+<br><br>
+Our team of real estate agents has extensive knowledge of the local market and the latest industry trends. We use this knowledge to provide our clients with expert guidance and advice throughout the buying or selling process. We take the time to understand our clients' needs and preferences, and we work tirelessly to help them achieve their real estate goals.
+<br><br>
+At our real estate sales website, we pride ourselves on our professionalism, integrity, and commitment to our clients. We believe that our success is measured by the satisfaction of our clients, and we strive to exceed their expectations at every opportunity.
+<br><br>
+Thank you for considering our website for your real estate needs. We look forward to working with you and helping you achieve your real estate goals.
+    </p>
   </div>
 
 
+
+
+
+
+
+
+
+
 <!-- Remove the container if you want to extend the Footer to full width. -->
+
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
   <div class="p-4 pb-0 footer">

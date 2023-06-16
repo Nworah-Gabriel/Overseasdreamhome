@@ -98,6 +98,35 @@ class DreamMansionImage(models.Model):
     def __str__(self):
         return self.DreamMansion.Title
     
+
+class DreamMansionPropertie(models.Model):
+    """
+    A model class for storing image url linked to a property
+    """
+
+    DreamMansion = models.ForeignKey(to="Dream_Mansion", on_delete=models.CASCADE)
+    Created = models.DateTimeField(default=datetime.now)
+    Name = models.CharField(max_length=50, default="Plot size")
+    Value = models.CharField(max_length=50, default="1200 m2")
+    unique_id = models.UUIDField(default=uuid4, editable=False, unique=True)
+
+    def __str__(self):
+        return self.DreamMansion.Title
+
+
+class DreamMansionFeature(models.Model):
+    """
+    A model class for storing image url linked to a property
+    """
+
+    DreamMansion = models.ForeignKey(to="Dream_Mansion", on_delete=models.CASCADE)
+    Created = models.DateTimeField(default=datetime.now)
+    Feature = models.CharField(max_length=50, default="Garden")
+    unique_id = models.UUIDField(default=uuid4, editable=False, unique=True)
+
+    def __str__(self):
+        return self.DreamMansion.Title
+
 class CheapHomeImage(models.Model):
     """
     A model class for storing image url linked to a property
@@ -110,3 +139,33 @@ class CheapHomeImage(models.Model):
 
     def __str__(self):
         return self.CheapHomes.Title
+    
+
+class CheapHomePropertie(models.Model):
+    """
+    A model class for storing image url linked to a property
+    """
+
+    CheapHomes = models.ForeignKey(to="Cheap_Home", on_delete=models.CASCADE)
+    Created = models.DateTimeField(default=datetime.now)
+    Name = models.CharField(max_length=50, default="Plot size")
+    Value = models.CharField(max_length=50, default="1200 m2")
+    unique_id = models.UUIDField(default=uuid4, editable=False, unique=True)
+
+    def __str__(self):
+        return self.DreamMansion.Title
+
+
+class CheapHomeFeature(models.Model):
+    """
+
+    A model class for storing image url linked to a property
+    """
+
+    CheapHomes = models.ForeignKey(to="Cheap_Home", on_delete=models.CASCADE)
+    Created = models.DateTimeField(default=datetime.now)
+    Feature = models.CharField(max_length=50, default="Garden")
+    unique_id = models.UUIDField(default=uuid4, editable=False, unique=True)
+
+    def __str__(self):
+        return self.DreamMansion.Title

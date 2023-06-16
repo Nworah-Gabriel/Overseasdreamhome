@@ -30,6 +30,11 @@
   .card-title{
     font-size: 1.25rem;
   }
+  /* mew */
+  footer {
+    position: static !important;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 479.98px) {
@@ -50,6 +55,11 @@
   .container{
     width: 100%;
     /* margin-left: 2.5%; */
+  }
+  /* new */
+  footer {
+    position: static !important;
+    width: 100%;
   }
 }
 /* @media  screen and (max-width: 479.98) {
@@ -157,4 +167,27 @@ html, body {
 }
 .pgh {
   text-align: start;
+}
+
+/* newly added */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.asa {
+  text-align: end;
+  margin-bottom: 150px;
+}
+.back_btn {
+  text-decoration: none !important;
+  border-radius: 5px;
+  color: #ffdcd0;
+  background-color: #edaa38;
+  padding: 6px;
+}
+.back_btn:hover{
+  background-color: #965d17;
+  color: #ffdcd0;
 }
