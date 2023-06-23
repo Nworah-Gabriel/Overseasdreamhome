@@ -49,6 +49,25 @@
     </div>
   </div>
 
+  <!-- PAGINATION ROW -->
+  <div class="container" style="display: flex; flex-direction: row; justify-content: space-around; width: 100%; padding: 1px solid black;">
+    <span class="step-links">
+        <span class="current">
+            Page {{ CheapHomes.number }} of {{ CheapHomes.paginator.num_pages }}
+        </span>
+    </span>
+    <div>
+      {% if CheapHomes.has_previous %}
+            <a href="?page=1" style="text-decoration: none; margin-right: 10px;">&laquo; first</a>
+            <a href="?page={{ CheapHomes.previous_page_number }}" style="text-decoration: none; margin-right: 10px;">previous</a>
+      {% endif %}
+      {% if CheapHomes.has_next %}
+            <a href="?page={{ CheapHomes.next_page_number }}" style="text-decoration: none; margin-right: 10px;">next</a>
+            <a href="?page={{ CheapHomes.paginator.num_pages }}" style="text-decoration: none;">last &raquo;</a>
+      {% endif %}
+    </div>
+        
+</div>
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <footer class="bg-dark text-center text-white">

@@ -25,11 +25,14 @@
   .col-6 {
     width: 100%;
     height: fit-content;
-    justify-content: center;
+    justify-content: right;
   }
   .card-title{
     font-size: 1.25rem;
   }
+  div.col-md-8 {
+    width: 60% !important;
+}
 }
 
 @media only screen and (max-width: 479.98px) {
@@ -41,6 +44,7 @@
     /* transform: scale(0.9); */
     display: inline;
     width: 50%;
+    max-width: 100px !important;
   }
   .col-md-8 {
     /* transform: scale(0.9); */
@@ -50,6 +54,9 @@
   .container{
     width: 100%;
     /* margin-left: 2.5%; */
+  }
+  div.col-md-8 {
+    width: 66.666667% !important;
   }
 }
 /* @media  screen and (max-width: 479.98) {
@@ -109,6 +116,12 @@ html, body {
 .card-body {
   text-align: center;
 }
+div.col-md-4 {
+  max-width: 160px;
+}
+div.col-md-8 {
+  width: 66.666667%
+}
 
 .col-4 {
   padding-top: 20px;
@@ -158,3 +171,11 @@ html, body {
 .pgh {
   text-align: start;
 }
+/* 
+a.navigation{
+  text-decoration: none;
+}
+
+a.navigation:active{
+  color: #ed9c38;
+} */

@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, HttpResponseRedirect
 from .models import Dream_Mansion, Cheap_Home, CheapHomeImage, DreamMansionImage, CheapHomeFeature
 from .models import CheapHomePropertie, DreamMansionFeature, DreamMansionPropertie
@@ -14,6 +15,22 @@ def home(request):
 
     emailForm = Email(request.POST)
 
+    paginator1 = Paginator(CheapHomes, 6)
+    paginator2 = Paginator(DreamMansions, 6)
+    Paginator3 = Paginator(CheapHomes, 9)
+
+    #FOR LATEST PROPERTIES PAGINATION
+    paginator3_page_number = request.GET.get("page")
+    page_obj_paginator3 = Paginator3.get_page(paginator3_page_number)
+
+    # FOR CHEAP HOME PAGINATION
+    paginator1_page_number = request.GET.get("page")
+    page_obj_paginator1 = paginator1.get_page(paginator1_page_number)
+
+    # FOR DREAM MANSION 
+    paginator2_page_number = request.GET.get("page")
+    page_obj_paginator2 = paginator2.get_page(paginator2_page_number)
+
     if request.method == 'POST':
         print("posted")
         if emailForm.is_valid():
@@ -23,8 +40,9 @@ def home(request):
 
     return render(request, "index.html",
                   {
-                    "DreamMansions":DreamMansions,
-                    "CheapHomes": CheapHomes,
+                    "DreamMansions": page_obj_paginator2,
+                    "CheapHomes": page_obj_paginator1,
+                    "LatestHomes": page_obj_paginator3,
                     'emailForm':emailForm
                    })
 
@@ -34,6 +52,11 @@ def CheapHomes(request):
     A  functional based view for cheap homes
     """
     CheapHomes = Cheap_Home.objects.all()
+    paginator1 = Paginator(CheapHomes, 12)
+
+    # FOR CHEAP HOME PAGINATION
+    paginator1_page_number = request.GET.get("page")
+    page_obj_paginator1 = paginator1.get_page(paginator1_page_number)
 
     emailForm = Email(request.POST)
 
@@ -43,7 +66,7 @@ def CheapHomes(request):
             print("valid")
             emailForm.save()
             return render(request, 'alert.html')
-    return render(request, "CheapHomes.html", {"CheapHomes": CheapHomes, 'emailForm':emailForm})
+    return render(request, "CheapHomes.html", {"CheapHomes": page_obj_paginator1, 'emailForm':emailForm})
 
 
 def DreamHomes(request):
@@ -52,6 +75,11 @@ def DreamHomes(request):
     """
     
     DreamHomes = Dream_Mansion.objects.all()
+    paginator1 = Paginator(DreamHomes, 12)
+
+    # FOR DREAM MANSION PAGINATION
+    paginator1_page_number = request.GET.get("page")
+    page_obj_paginator1 = paginator1.get_page(paginator1_page_number)
 
     emailForm = Email(request.POST)
 
@@ -61,7 +89,7 @@ def DreamHomes(request):
             print("valid")
             emailForm.save()
             
-    return render(request, "DreamHomes.html", {"DreamHomes": DreamHomes, 'emailForm':emailForm})
+    return render(request, "DreamHomes.html", {"DreamHomes": page_obj_paginator1, 'emailForm':emailForm})
 
 
 def ContactUs(request):
