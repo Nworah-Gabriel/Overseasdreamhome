@@ -10,8 +10,8 @@ def home(request):
     A functional based view for the homepage
     """
     
-    DreamMansions = Dream_Mansion.objects.all()
-    CheapHomes = Cheap_Home.objects.all()
+    DreamMansions = Dream_Mansion.objects.all().order_by("-DatePub").values()
+    CheapHomes = Cheap_Home.objects.all().order_by("-DatePub").values()
 
     emailForm = Email(request.POST)
 
@@ -51,7 +51,7 @@ def CheapHomes(request):
     """
     A  functional based view for cheap homes
     """
-    CheapHomes = Cheap_Home.objects.all()
+    CheapHomes = Cheap_Home.objects.all().order_by("-DatePub").values()
     paginator1 = Paginator(CheapHomes, 12)
 
     # FOR CHEAP HOME PAGINATION
@@ -74,7 +74,7 @@ def DreamHomes(request):
     A  functional based view for cheap homes
     """
     
-    DreamHomes = Dream_Mansion.objects.all()
+    DreamHomes = Dream_Mansion.objects.all().order_by("-DatePub").values()
     paginator1 = Paginator(DreamHomes, 12)
 
     # FOR DREAM MANSION PAGINATION
