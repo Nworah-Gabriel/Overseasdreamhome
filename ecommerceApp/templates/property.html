@@ -18,7 +18,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light my_navbar">
     <div class="container-fluid">
-      <a class="navbar-brand nav_logo" href="/"><img src="{% static 'images/Logo2.png' %}" alt=""></a>
+      <a class="navbar-brand nav_logo" href="/"><img src="{% static 'images/logo2.png' %}" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,7 +38,7 @@
       <div class="col-7">
         <div class="property-info">
           <div class="name">
-            <h2 class="page_header">{{ mansion.Title }}</h2>
+            <h2 class="page_header">{{ mansion.DisplayTitle }}</h2>
         <p class="caption">{{ mansion.Location }}</p>
           </div>
           <div class="price">

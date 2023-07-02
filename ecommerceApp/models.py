@@ -72,6 +72,7 @@ class Dream_Mansion(models.Model):
     """
 
     Title = models.CharField(max_length=200)
+    DisplayTitle = models.CharField(max_length=200, default="4 Bed Villa")
     Location = models.CharField(max_length=200)
     DollarsPrice = models.CharField(max_length=50, default="$50,000")
     EurosPrice = models.CharField(max_length=50, default="€20,000")
