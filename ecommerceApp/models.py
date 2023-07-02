@@ -53,6 +53,7 @@ class Cheap_Home(models.Model):
 
     Title = models.CharField(max_length=200)
     Location = models.CharField(max_length=200)
+    DisplayTitle = models.CharField(max_length=200, default="4 Bed Villa")
     DollarsPrice = models.CharField(max_length=50, default="$50,000", verbose_name="Dollar Price")
     EurosPrice = models.CharField(max_length=50, default="€20,000", verbose_name="Euros Price")
     PoundsPrice = models.CharField(max_length=50, default="£35,000", verbose_name="Pounds Price")
